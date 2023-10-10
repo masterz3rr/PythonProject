@@ -5,9 +5,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Contact Form Template</title>
+        <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
 
         <script src="https://cdn.tailwindcss.com"></script>
-        </head>
+        <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+
+    </head>
     <body class>
         <div class="lg:flex">
            <div class="hidden lg:flex items-center justify-center bg-gray-900 flex-1 ">
@@ -16,42 +19,59 @@
 
 
             <div class="lg:w-1/2 xl:max-w-screen-sm">
-                <div class="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:px-12">
+                <div class="pt-24  bg-indigo-100 lg:bg-white flex justify-center lg:px-12">
                     <img src="{% static 'images/qicon.png'%}" alt="Icon">
                 </div>
-                <div class="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+                <div class="mt-2 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-4 xl:px-24 xl:max-w-2xl">
                     <h2 class="text-center text-2xl text-slate-900 font-display font-extrabold  xl:text-4xl
                     xl:text-bold">Welcome to QuizMe!</h2>
                     <p class="font-display text-center text-slate-800 mt-2">Login your account to get started</p>
                     <div class="mt-12">
                         <form>
-                            <div>
-                                <div class="text-sm font-bold text-gray-700 tracking-wide">Email Address</div>
-                                <i class="fa-regular fa-user"></i>
-                                <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="" placeholder="mike@gmail.com">
+                            <div class="flex flex-row justify-start items-center">
+                                <i class="fa-regular fa-user text-yellow-500"></i>
+                                <input class="ml-4 w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="Username or Email"/>
                             </div>
-                            <div class="mt-8">
-                                <div class="flex justify-between items-center">
-                                    <div class="text-sm font-bold text-gray-700 tracking-wide">
-                                        Password
-                                    </div>
-                                    <div>
-                                        <a class="text-xs font-display font-semibold text-yellow-500 hover:text-yellow-800
+
+                            <div class="mt-8 flex flex-row justify-start items-center">
+                                <i class="fa-regular fa-lock text-yellow-500"></i>
+                                <input class="ml-4 w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="Password"/>
+
+                            </div>
+                            <div class="flex float-right mt-1">
+                                <a class="text-xs font-display font-semibold text-yellow-500 hover:text-yellow-800
                                         cursor-pointer">
                                             Forgot Password?
-                                        </a>
-                                    </div>
-                                </div>
-                                <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="" placeholder="Enter your password">
+                                </a>
                             </div>
-                            <div class="mt-10">
+
+                            <div class="mt-14">
                                 <button class="bg-yellow-500 text-gray-100 p-4 w-full rounded-[5px] tracking-wide
                                 font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-yellow-600
                                 shadow-lg">
                                     Log In
-                                </button>
+                                  </button>
                             </div>
                         </form>
+                        <p class="mt-6 text-sm font-display font-normal text-gray-700 text-center">
+                            or login with
+                        </p>
+
+                        <div class="mt-6 flex flex-row justify-center items-center">
+                               <button class=" h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
+                                    <div class="relative w-max flex items-center justify-between">
+                                        <img src="https://tailus.io/sources/blocks/social/preview/images/google.svg" class="left-0 w-5 mr-2" alt="google logo">
+                                        <p class="w-max font-normal tracking-wide text-gray-700 text-xs transition duration-300 group-hover:text-blue-600 sm:text-xs">Connect with Google</p>
+                                    </div>
+                               </button>
+                                <button class="ml-2 h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
+                                    <div class="relative w-max flex items-center space-x-4 justify-center">
+                                         <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg" class="left-0 w-5" alt="Facebook logo">
+                                         <p class="w-max font-normal tracking-wide text-gray-700 text-xs transition duration-300 group-hover:text-blue-600 sm:text-xs">Connect with Facebook</p>
+                                    </div>
+                                </button>
+                        </div>
+
                         <div class="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
                             Don't have an account ? <a class="cursor-pointer text-yellow-500 hover:text-yellow-800">Sign up</a>
                         </div>
